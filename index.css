@@ -1,0 +1,11 @@
+.premium-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 24px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 50px rgba(99, 102, 241, 0.2);
+    /* Binafsha rangli mayin porlash */
+    filter: saturate(1.1);
+    /* Ranglarni biroz yorqinroq qiladi */
+}
