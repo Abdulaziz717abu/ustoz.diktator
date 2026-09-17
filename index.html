@@ -4,12 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>USTOZ DIKTATOR</title>
 </head>
 
 <body>
     <h1>USTOZ DIKTATOR</h1>
+
     <img src="image/image.png" alt="">
+
+    <audio id="music" controls autoplay>
+        <source src="./Sport 25 - Диктатор Килиан Мбаппе.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        const music = document.getElementById("music");
+
+        // Try playing immediately (in case the browser allows it)
+        music.play().catch(() => {
+            // If blocked, start audio on the first user click anywhere on the page
+            const startAudio = () => {
+                music.play();
+                document.removeEventListener("click", startAudio);
+            };
+
+            document.addEventListener("click", startAudio);
+        });
+    </script>
+
 </body>
 
 </html>
